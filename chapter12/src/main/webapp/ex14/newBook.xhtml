@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Create a new book</title>
+</h:head>
+<h:body>
+
+    <h1>Create a new book</h1>
+    <hr/>
+
+    <h:form id="form" prependId="false">
+        <h:panelGrid columns="2">
+            <h:outputLabel value="ISBN : "/>
+            <h:inputText id="isbn" value="#{myBookController14.book.isbn}"/>
+
+            <h:outputLabel value="Title :"/>
+            <h:inputText id="title" value="#{myBookController14.book.title}"/>
+
+            <h:outputLabel value="Price : "/>
+            <h:inputText id="price" value="#{myBookController14.book.price}"/>
+
+            <h:outputLabel value="Description : "/>
+            <h:inputTextarea id="description" value="#{myBookController14.book.description}" cols="20"
+                             rows="5"/>
+
+            <h:outputLabel value="Number of pages : "/>
+            <h:inputText id="nbOfPage" value="#{myBookController14.book.nbOfPage}"/>
+
+            <h:outputLabel value="Illustrations : "/>
+            <h:selectBooleanCheckbox id="illustrations" value="#{myBookController14.book.illustrations}"/>
+        </h:panelGrid>
+
+        <h:commandButton value="Create a book" action="#{myBookController14.doCreateBook}">
+            <f:ajax execute="@form" render=":booklist"/>
+        </h:commandButton>
+
+    </h:form>
+
+    <hr/>
+    <h1>List of the books</h1>
+    <hr/>
+    <h:dataTable id="booklist" value="#{myBookController14.bookList}" var="bk" border="1">
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="ISBN"/>
+            </f:facet>
+            <h:outputText value="#{bk.isbn}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Title"/>
+            </f:facet>
+            <h:outputText value="#{bk.title}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Price"/>
+            </f:facet>
+            <h:outputText value="#{bk.price}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Description"/>
+            </f:facet>
+            <h:outputText value="#{bk.description}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Number Of Pages"/>
+            </f:facet>
+            <h:outputText value="#{bk.nbOfPage}"/>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Illustrations"/>
+            </f:facet>
+            <h:outputText value="#{bk.illustrations}"/>
+        </h:column>
+
+    </h:dataTable>
+
+    <i>APress - Beginning Java EE 6</i>
+</h:body>
+</html>

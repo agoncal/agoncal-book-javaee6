@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.agoncal.book.javaee6</groupId>
+    <artifactId>chapter06</artifactId>
+    <packaging>jar</packaging>
+    <version>2.0</version>
+    <name>06 - EJB</name>
+
+    <parent>
+        <groupId>org.agoncal.book.javaee6</groupId>
+        <artifactId>parent</artifactId>
+        <version>2.0</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.glassfish.main.extras</groupId>
+            <artifactId>glassfish-embedded-all</artifactId>
+            <version>${version.glassfish}</version>
+        </dependency>
+    </dependencies>
+    <!--To avoid multiple modules with Maven, here is what you need to manually do (it's not nice, but it works)
+    1) Comment the following section (maven-jar-plugin), package the jar, and deploy to GlassFish
+    2) Uncomment the following section, package the jar and run the Main class with app client
+       appclient -client target/chapter06-2.0.jar -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${version.maven.jar.plugin}</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.agoncal.book.javaee6.chapter06.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

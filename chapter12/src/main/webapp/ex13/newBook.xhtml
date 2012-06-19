@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Create a new book (converter)</title>
+</h:head>
+<h:body>
+    <h1>Create a new book</h1>
+    <hr/>
+    <h:form>
+        <table border="0">
+            <tr>
+                <td colspan="2">
+                    <h:messages errorStyle="color: red" warnStyle="color: orange"
+                                infoStyle="color: blue"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="ISBN : "/>
+                </td>
+                <td>
+                    <h:inputText value="#{myBookController13.book.isbn}" validator="isbnValidator"/>
+                    <!--This also works-->
+                    <!--<h:inputText value="#{myBookController13.book.isbn}">-->
+                    <!--<f:validator validatorId="isbnValidator" />-->
+                    <!--</h:inputText>-->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Title :"/>
+                </td>
+                <td>
+                    <h:inputText id="title" value="#{myBookController13.book.title}" required="true">
+                        <f:validateLength minimum="2" maximum="20"/>
+                    </h:inputText>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Price : "/>
+                </td>
+                <td>
+                    <h:inputText value="#{myBookController13.book.price}">
+                        <f:validateLongRange minimum="1" maximum="500"/>
+                    </h:inputText>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Description  : "/>
+                </td>
+                <td>
+                    <h:inputTextarea value="#{myBookController13.book.description}" cols="20" rows="5"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Number of pages : "/>
+                </td>
+                <td>
+                    <h:inputText value="#{myBookController13.book.nbOfPage}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Illustrations : "/>
+                </td>
+                <td>
+                    <h:selectBooleanCheckbox value="#{myBookController13.book.illustrations}"/>
+                </td>
+            </tr>
+        </table>
+
+        <h:commandButton value="Create a book" action="#{myBookController13.doCreateBook}"/>
+
+    </h:form>
+    <hr/>
+    <i>APress - Beginning Java EE 6</i>
+
+</h:body>
+</html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.agoncal.book.javaee6.chapter14</groupId>
+    <artifactId>consumer</artifactId>
+    <packaging>jar</packaging>
+    <version>2.0</version>
+    <name>14 - JAX-WS (Consumer)</name>
+
+    <parent>
+        <groupId>org.agoncal.book.javaee6</groupId>
+        <artifactId>chapter14</artifactId>
+        <version>2.0</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+            <version>${version.jaxws}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>chapter14-consumer-${project.version}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${version.maven.jar.plugin}</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.agoncal.book.javaee6.chapter14.ex23.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <version>${version.maven.jaxws.plugin}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <!--Stubs can be created either by wsdl URL (GlassFish need to be running with the WS deployed)-->
+                            <!--Or by wsdl files (these files are located under the wsdl directory)-->
+
+                            <!--<wsdlUrls>-->
+                            <!--<wsdlUrl>http://localhost:8080/chapter14-service-2.0/CardValidator01Service?wsdl-->
+                            <!--</wsdlUrl>-->
+                            <!--<wsdlUrl>http://localhost:8080/chapter14-service-2.0/CardValidator16Service?wsdl-->
+                            <!--</wsdlUrl>-->
+                            <!--<wsdlUrl>http://localhost:8080/chapter14-service-2.0/CardValidatorService?wsdl-->
+                            <!--</wsdlUrl>-->
+                            <!--</wsdlUrls>-->
+
+                            <wsdlFiles>
+                                <wsdlFile>CardValidator01Service.wsdl</wsdlFile>
+                                <wsdlFile>CardValidator16Service.wsdl</wsdlFile>
+                                <wsdlFile>CardValidatorService.wsdl</wsdlFile>
+                            </wsdlFiles>
+                            <keep>true</keep>
+
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

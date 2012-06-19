@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<project name="Java EE 6" default="package-source" basedir=".">
+
+    <property name="application.name" value="petstore"/>
+
+    <!-- =================================================================== -->
+    <!-- Variables                                                           -->
+    <!-- =================================================================== -->
+    <property name="home.dir" value="${basedir}"/>
+    <property name="zip.file.name" value="JavaEE6.zip"/>
+
+    <target name="package-source" description="zips all the source files">
+        <zip destfile="${zip.file.name}" basedir="${basedir}"
+             excludes="**/*.zip, **/*.log, **/target/**, **/nb-configuration.xml, Copie*/**, *.vpdm/**, vpproject/**, sun-appserv-samples/**, build.xml"/>
+    </target>
+
+</project>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <partial-response>
+            <changes>
+                <update id="booklist">
+                    <table id="booklist" border="1">
+                        <tr>
+                            <th scope="col">ISBN</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Number Of Pages</th>
+                            <th scope="col">Illustrations</th>
+                        </tr>
+                        <tr>
+                            <td>1234-234</td>
+                            <td>H2G2</td>
+                            <td>12.0</td>
+                            <td>Scifi IT book</td>
+                            <td>241</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>564-694</td>
+                            <td>Robots</td>
+                            <td>18.5</td>
+                            <td>Best seller</td>
+                            <td>317</td>
+                            <td>true</td>
+                        </tr>
+                    </table>
+                </update>
+            </changes>
+        </partial-response>
+    </body>
+</html>

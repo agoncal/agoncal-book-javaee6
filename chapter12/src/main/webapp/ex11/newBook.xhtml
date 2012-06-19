@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Create a new book (navigation)</title>
+</h:head>
+<h:body>
+    <h1>Create a new book</h1>
+    <hr/>
+    <h:form id="bookForm">
+        <table border="0">
+            <tr>
+                <td colspan="3">
+                    <h:messages showDetail="true" errorStyle="color: red" warnStyle="color: orange"
+                                infoStyle="color: blue" globalOnly="true"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="ISBN : "/>
+                </td>
+                <td>
+                    <h:inputText id="isbn" value="#{myBookController11.book.isbn}"/>
+                </td>
+                <td>
+                    <h:message id="msgISBN" for="isbn"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Title :"/>
+                </td>
+                <td>
+                    <h:inputText id="title" value="#{myBookController11.book.title}"/>
+                </td>
+                <td>
+                    <h:message id="msgTitle" for="title"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Price : "/>
+                </td>
+                <td>
+                    <h:inputText id="price" value="#{myBookController11.book.price}"/>
+                </td>
+                <td>
+                    <h:message id="msgPrice" for="price"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Description  : "/>
+                </td>
+                <td>
+                    <h:inputTextarea id="description" value="#{myBookController11.book.description}" cols="20"
+                                     rows="5"/>
+                </td>
+                <td>
+                    <h:message id="msgDescription" for="description"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Number of pages : "/>
+                </td>
+                <td>
+                    <h:inputText id="nbOfPage" value="#{myBookController11.book.nbOfPage}"/>
+                </td>
+                <td>
+                    <h:message id="msgNbOfPage" for="nbOfPage"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Illustrations : "/>
+                </td>
+                <td>
+                    <h:selectBooleanCheckbox id="illustrations" value="#{myBookController11.book.illustrations}"/>
+                </td>
+                <td>
+                    <h:message id="msgIllustrations" for="illustrations"/>
+                </td>
+            </tr>
+        </table>
+
+        <h:commandButton value="Create a book" action="#{myBookController11.doCreateBook}"/>
+
+    </h:form>
+    <hr/>
+    <i>APress - Beginning Java EE 6</i>
+
+</h:body>
+</html>

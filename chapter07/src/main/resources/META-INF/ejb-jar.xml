@@ -1,0 +1,32 @@
+<ejb-jar xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd"
+         version="3.1">
+    <enterprise-beans>
+        <session>
+            <ejb-name>ItemEJB12</ejb-name>
+            <local>org.agoncal.book.javaee6.chapter07.ex12.ItemLocal12</local>
+            <!--<remote>org.agoncal.book.javaee6.chapter07.ex12.ItemRemote12</remote>-->
+            <local-bean/>
+            <ejb-class>org.agoncal.book.javaee6.chapter07.ex12.ItemEJB12</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+        </session>
+        <session>
+            <ejb-name>ItemEJB14</ejb-name>
+            <ejb-class>org.agoncal.book.javaee6.chapter07.ex14.ItemEJB14</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <env-entry>
+                <env-entry-name>currencyEntry</env-entry-name>
+                <env-entry-type>java.lang.String</env-entry-type>
+                <env-entry-value>Euros</env-entry-value>
+            </env-entry>
+            <env-entry>
+                <env-entry-name>changeRateEntry</env-entry-name>
+                <env-entry-type>java.lang.Float</env-entry-type>
+                <env-entry-value>0.80</env-entry-value>
+            </env-entry>
+        </session>
+    </enterprise-beans>
+</ejb-jar>

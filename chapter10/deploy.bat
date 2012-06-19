@@ -1,0 +1,1 @@
+asadmin deploy --force target\chapter10-2.0.war
