@@ -4,7 +4,39 @@
 * [Apress Java EE 6 Book](http://apress.com/book/view/9781430219545)
 * [Download code](http://kenai.com/projects/beginningee6/sources/src/show/chapters/trunk)
  
-## Structure of the book
+# Structure of the book
+
+Section 1 - Introduction
+
+* Chapter  1 (42) - Java EE 7 at a Glance
+
+Section 2 - Building a domain model
+
+* Chapter  2 (18) - Java Persistence
+* Chapter  3 (62) - Object-Relational Mapping
+* Chapter  4 (44) - Managing Persistent Object
+* Chapter  5 (12) - Callbacks & Listeners
+
+Section 3 - Implementing business logic
+
+* Chapter  6 (22) - Enterprise Java Beans (11/9)
+* Chapter  7 (36) - Session Beans & Timer Service (29/5)
+* Chapter  8 (16) - Callback & Interceptors (6/9)
+* Chapter  9 (24) - Transactions & security (15/7)
+
+Section 4 - Adding a web & user interface
+
+* Chapter 10 (20) - JavaServer Faces
+* Chapter 11 (48) - Pages & components (25/23)
+* Chapter 12 (32) - Processing & Navigation
+
+Section 5 - Interoperability
+
+* Chapter 13 (38) - Messaging
+* Chapter 14 (36) - SOAP Web Services
+* Chapter 15 (34) - RESTful Web Service
+
+# Structure of the code and Maven modules
 
 The code used in the book is defined in the following sub-directories :
 * Chapter02 : Introduction to JPA 2.0
@@ -24,7 +56,7 @@ The code used in the book is defined in the following sub-directories :
 * Chapter14-Service : SOAP Web service
 * Chapter15-Resource : RESTful Web service
 
-## Compile / Package
+# Compile / Package
 To compile, package and execute the code you need the following software :
 * Java SE 6 : http://java.sun.com/javase/downloads
 * Derby 1.5 : http://db.apache.org/derby
