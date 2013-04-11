@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.agoncal.book.javaee7</groupId>
-    <artifactId>chapter13</artifactId>
-    <version>1.0</version>
+    <groupId>org.agoncal.book.javaee6</groupId>
+    <artifactId>chapter09</artifactId>
     <packaging>jar</packaging>
-    <name>13 - Transaction and security</name>
+    <version>2.0</version>
+    <name>09 - Transaction and security</name>
 
     <parent>
         <groupId>org.agoncal.book.javaee7</groupId>
