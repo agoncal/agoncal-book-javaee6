@@ -1,8 +1,8 @@
 # Beginning Java EE 6 Platform with GlassFish 3: From Novice to Professional
 
 * [Antonio Goncalves](http://www.antoniogoncalves.org) 
-* [Apress Java EE 6 Book](http://apress.com/book/view/9781430219545)
-* [Download code](http://kenai.com/projects/beginningee6/sources/src/show/chapters/trunk)
+* [Java EE 6 Book](http://www.amazon.com/gp/product/143022889X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=143022889X&linkCode=as2&tag=antgonblo-20)
+* [Download code](https://github.com/agoncal/agoncal-book-javaee6/archive/master.zip)
  
 # Structure of the book
 
